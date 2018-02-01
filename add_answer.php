@@ -14,7 +14,7 @@ $id=$_POST['id'];
 // Find highest answer number. 
 $sql="SELECT MAX(a_id) AS Maxa_id FROM $tbl_name WHERE question_id='$id'";
 $result=mysqli_query($conn, $sql);
-$rows=mysqli_fetch_array($result, MYSQLI_BOTH);
+$rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 
 // add + 1 to highest answer number and keep it in variable name "$Max_id". if there no answer yet set it = 1 
 if ($rows) {
@@ -34,7 +34,7 @@ $datetime=date("d/m/y H:i:s"); // create date and time
 
 // Insert answer 
 $sql2="INSERT INTO $tbl_name(question_id, a_id, a_name, a_email, a_answer, a_datetime)VALUES('$id', '$Max_id', '$a_name', '$a_email', '$a_answer', '$datetime')";
-$result2=mysql_query($sql2);
+$result2=mysqli_query($conn, $sql2);
 
 if($result2){
 echo "Successful<BR>";
@@ -44,7 +44,7 @@ echo "<a href='view_topic.php?id=".$id."'>View your answer</a>";
 // If added new answer, add value +1 in reply column 
 $tbl_name2="forum_question";
 $sql3="UPDATE $tbl_name2 SET reply='$Max_id' WHERE id='$id'";
-$result3=mysql_query($sql3);
+$result3=mysqli_query($conn, $sql3);
 
 }
 else {
@@ -52,5 +52,5 @@ echo "ERROR";
 }
 
 // Close connection
-mysql_close();
+mysqli_close();
 ?>
