@@ -12,7 +12,7 @@ $email=$_POST['email'];
 $datetime=date("d/m/y h:i:s"); //create date time
 
 $sql="INSERT INTO $tbl_name(topic, detail, name, email, datetime)VALUES('$topic', '$detail', '$name', '$email', '$datetime')";
-$result=mysqli_query($conn, $sql);
+$result=mysqli_query($sql);
 
 if($result){
 echo "Successful<BR>";
