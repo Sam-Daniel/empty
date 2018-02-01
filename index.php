@@ -30,7 +30,7 @@ $result=mysqli_query($conn, $sql);
  
 
 // Start looping table row
-while($rows=mysqli_fetch_array($conn, $result)){
+while($rows=mysqli_fetch_array($result, MYSQLI_BOTH)){
 ?>
 <tr>
 <td bgcolor="#FFFFFF"><? echo $rows['id']; ?></td>
