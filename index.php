@@ -1,5 +1,5 @@
 <?php
-
+ include 'head.html';
 $host="sql12.freesqldatabase.com"; // Host name 
 $username="sql12218697"; // Mysql username 
 $password="uJEXQMxpDw"; // Mysql password 
