@@ -1,24 +1,20 @@
-############### Code
-
 <?php
-
-$host="localhost"; // Host name 
-$username=""; // Mysql username 
-$password=""; // Mysql password 
-$db_name="test"; // Database name 
-$tbl_name="forum_answer"; // Table name 
-
+$host="sql12.freesqldatabase.com"; // Host name 
+$username="sql12218697"; // Mysql username 
+$password="uJEXQMxpDw"; // Mysql password 
+$db_name="sql12218697"; // Database name 
+$tbl_name="forum_question"; // Table name 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+$conn = mysqli_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysqli_select_db( $conn, $db_name)or die("cannot select DB");
 
 // Get value of id that sent from hidden field 
 $id=$_POST['id'];
 
 // Find highest answer number. 
 $sql="SELECT MAX(a_id) AS Maxa_id FROM $tbl_name WHERE question_id='$id'";
-$result=mysql_query($sql);
-$rows=mysql_fetch_array($result);
+$result=mysqli_query($conn, $sql);
+$rows=mysqli_fetch_array($result, MYSQLI_BOTH);
 
 // add + 1 to highest answer number and keep it in variable name "$Max_id". if there no answer yet set it = 1 
 if ($rows) {
