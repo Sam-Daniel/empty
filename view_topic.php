@@ -7,14 +7,13 @@ $db_name="sql12218697"; // Database name
 $tbl_name="forum_question"; // Table name 
 // Connect to server and select databse.
 $conn = mysqli_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysqli_select_db( $conn, $db_name)or die("cannot select DB");;;
+mysqli_select_db( $conn, $db_name)or die("cannot select DB");
 
 // get value of id that sent from address bar 
 $id=$_GET['id'];
 
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
 $result=mysqli_query($conn, $sql)
-
 $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 ?>
 
