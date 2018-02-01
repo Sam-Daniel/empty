@@ -1,6 +1,7 @@
 <?php
 
 include 'connect.php';
+include 'index.php';
 
 // get data that sent from form 
 $topic=$_POST['topic'];
