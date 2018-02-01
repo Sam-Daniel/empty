@@ -1,5 +1,5 @@
 <?php
- include 'head.html';
+ 
 $host="sql12.freesqldatabase.com"; // Host name 
 $username="sql12218697"; // Mysql username 
 $password="uJEXQMxpDw"; // Mysql password 
@@ -27,7 +27,7 @@ $result=mysqli_query($conn, $sql);
 
 <?php
 
- 
+ include ('head.html');
 
 // Start looping table row
 while($rows=mysqli_fetch_array($result, MYSQLI_BOTH)){
