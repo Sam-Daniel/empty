@@ -15,7 +15,7 @@ $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 
 $result=mysqli_query($conn, $sql);
 ?>
-
+<div w3-include-html="head.html"></div>
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>#</strong></td>
@@ -27,7 +27,7 @@ $result=mysqli_query($conn, $sql);
 
 <?php
 
- include ('head.html');
+
 
 // Start looping table row
 while($rows=mysqli_fetch_array($result, MYSQLI_BOTH)){
