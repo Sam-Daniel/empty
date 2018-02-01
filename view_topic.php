@@ -45,9 +45,9 @@ $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 $tbl_name2="forum_answer"; // Switch to table "forum_answer"
 
 $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
-$result2=mysql_query($conn, $sql2);
+$result2=mysqli_query($conn, $sql2);
 
-while($rows=mysql_fetch_array($result2, MYSQLI_BOTH)){
+while($rows=mysqli_fetch_array($result2, MYSQLI_BOTH)){
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
@@ -88,9 +88,9 @@ while($rows=mysql_fetch_array($result2, MYSQLI_BOTH)){
 }
 
 $sql3="SELECT view FROM $tbl_name WHERE id='$id'";
-$result3=mysql_query($sql3);
+$result3=mysqli_query($conn, $sql3);
 
-$rows=mysql_fetch_array($result3);
+$rows=mysqli_fetch_array($result3, MYSQLI_BOTH);
 $view=$rows['view'];
 
  
@@ -99,7 +99,7 @@ $view=$rows['view'];
 if(empty($view)){
 $view=1;
 $sql4="INSERT INTO $tbl_name(view) VALUES('$view') WHERE id='$id'";
-$result4=mysql_query($sql4);
+$result4=mysqli_query($conn, $sql4);
 }
 
  
@@ -107,7 +107,7 @@ $result4=mysql_query($sql4);
 // count more value
 $addview=$view+1;
 $sql5="update $tbl_name set view='$addview' WHERE id='$id'";
-$result5=mysql_query($sql5);
+$result5=mysqli_query($conn, $sql5);
 
 mysql_close();
 ?>
