@@ -14,7 +14,7 @@ $id=$_GET['id'];
 
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
 $result=mysqli_query($conn, $sql)
-$rows=mysqli_fetch_array($result, MYSQLI_BOTH)
+while($rows=mysqli_fetch_array($result, MYSQLI_BOTH))
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
