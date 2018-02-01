@@ -109,7 +109,7 @@ $addview=$view+1;
 $sql5="update $tbl_name set view='$addview' WHERE id='$id'";
 $result5=mysqli_query($conn, $sql5);
 
-mysql_close();
+mysqli_close();
 ?>
 
 
