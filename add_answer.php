@@ -14,7 +14,7 @@ $id=$_POST['id'];
 // Find highest answer number. 
 $sql="SELECT MAX(a_id) AS Maxa_id FROM $tbl_name WHERE question_id='$id'";
 $result=mysqli_query($conn, $sql);
-
+$rows=mysqli_fetch_array();
 
 
 // add + 1 to highest answer number and keep it in variable name "$Max_id". if there no answer yet set it = 1 
