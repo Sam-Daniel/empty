@@ -52,5 +52,5 @@ echo "ERROR";
 }
 
 // Close connection
-mysqli_close();
+mysqli_close($conn);
 ?>
