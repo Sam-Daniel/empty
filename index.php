@@ -43,7 +43,7 @@ while($rows=mysqli_fetch_array($result, MYSQLI_BOTH)){
 <?php
 // Exit looping and close connection 
 }
-mysqli_close();
+mysqli_close($this->con);
 ?>
 
 <tr>
