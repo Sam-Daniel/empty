@@ -20,5 +20,5 @@ echo "<a href=index.php>View your topic</a>";
 else {
 echo "ERROR";
 }
-mysqli_close();
+mysqli_close($conn);
 ?>
