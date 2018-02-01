@@ -7,13 +7,13 @@ $db_name="sql12218697"; // Database name
 $tbl_name="forum_question"; // Table name 
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+$conn = mysqli_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysqli_select_db("$db_name")or die("cannot select DB");
 
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-$result=mysql_query($sql);
+$result=mysql_query($sql, $conn);
 ?>
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
