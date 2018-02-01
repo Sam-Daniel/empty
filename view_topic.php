@@ -13,8 +13,8 @@ mysqli_select_db( $conn, $db_name)or die("cannot select DB");
 $id=$_GET['id'];
 
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
-$result=mysqli_query($conn, $sql)
-while($rows=mysqli_fetch_array($result, MYSQLI_BOTH))
+$result=mysqli_query($conn, $sql);
+$rows=mysqli_fetch_array($result, MYSQLI_BOTH))
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
