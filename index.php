@@ -13,7 +13,7 @@ mysqli_select_db( $conn, $db_name)or die("cannot select DB");;
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-$result=mysql_query($sql, $conn);
+$result=mysqli_query($sql, $conn);
 ?>
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
