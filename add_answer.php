@@ -13,7 +13,7 @@ $id=$_POST['id'];
 
 // Find highest answer number. 
 $sql="SELECT MAX(a_id) AS Maxa_id FROM $tbl_name WHERE question_id='$id'";
-$result=mysqli_query($conn, $sql) or die("MySQL error: " . mysqli_error($result) . "<hr>\nQuery: $query"); 
+$result=mysqli_query($conn, $sql)or die("dead"); 
 $rows=mysqli_fetch_array($result);
 
 
