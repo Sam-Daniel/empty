@@ -13,7 +13,7 @@ mysqli_select_db( $conn, $db_name)or die("cannot select DB");;
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 // OREDER BY id DESC is order result by descending
 
-$result=mysqli_query($sql, $conn);
+$result=mysqli_query($conn, $sql);
 ?>
 
 <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
@@ -30,7 +30,7 @@ $result=mysqli_query($sql, $conn);
  
 
 // Start looping table row
-while($rows=mysql_fetch_array($result)){
+while($rows=mysqli_fetch_array($result)){
 ?>
 <tr>
 <td bgcolor="#FFFFFF"><? echo $rows['id']; ?></td>
