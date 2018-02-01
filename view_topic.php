@@ -1,22 +1,21 @@
 <?php
 
-$host="localhost"; // Host name 
-$username=""; // Mysql username 
-$password=""; // Mysql password 
-$db_name="test"; // Database name 
+$host="sql12.freesqldatabase.com"; // Host name 
+$username="sql12218697"; // Mysql username 
+$password="uJEXQMxpDw"; // Mysql password 
+$db_name="sql12218697"; // Database name 
 $tbl_name="forum_question"; // Table name 
-
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+$conn = mysqli_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysqli_select_db( $conn, $db_name)or die("cannot select DB");;;
 
 // get value of id that sent from address bar 
 $id=$_GET['id'];
 
 $sql="SELECT * FROM $tbl_name WHERE id='$id'";
-$result=mysql_query($sql);
+$result=mysqli_query($conn, $sql)
 
-$rows=mysql_fetch_array($result);
+$rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
@@ -47,9 +46,9 @@ $rows=mysql_fetch_array($result);
 $tbl_name2="forum_answer"; // Switch to table "forum_answer"
 
 $sql2="SELECT * FROM $tbl_name2 WHERE question_id='$id'";
-$result2=mysql_query($sql2);
+$result2=mysql_query($conn, $sql2);
 
-while($rows=mysql_fetch_array($result2)){
+while($rows=mysql_fetch_array($result2, MYSQLI_BOTH)){
 ?>
 
 <table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
