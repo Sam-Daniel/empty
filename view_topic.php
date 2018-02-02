@@ -1,5 +1,5 @@
 <?php
-include ('head.html');
+
 $host="sql12.freesqldatabase.com"; // Host name 
 $username="sql12218697"; // Mysql username 
 $password="uJEXQMxpDw"; // Mysql password 
@@ -16,7 +16,19 @@ $sql="SELECT * FROM $tbl_name WHERE id='$id'";
 $result=mysqli_query($conn, $sql);
 $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 ?>
+<html>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 
+<body>
+
+<div w3-include-html="head.html"></div> 
+
+<script>
+w3.includeHTML();
+</script>
+
+</body>
+</html>
 <table width="1200" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
