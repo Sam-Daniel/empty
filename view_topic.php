@@ -126,10 +126,27 @@ mysqli_close($conn);
 <tr>
 <td>&nbsp;</td>
 <td><input name="id" type="hidden" value="<? echo $id; ?>"></td>
-<td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
+<td><input type="submit" class="button-1" value="Submit"> <input type="reset" name="button-1" value="Reset"></td>
 </tr>
 </table>
 </td>
 </form>
 </tr>
 </table>
+ <style>
+ .button-1{
+  right-padding: 5px;
+  width:140px;
+  height:40px;
+  border:2px solid #34495e;
+  background:#ffff;
+  
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 0;
+}
+
+ </style>
