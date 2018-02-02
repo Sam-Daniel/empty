@@ -50,18 +50,12 @@ $result2=mysqli_query($conn, $sql2);
 while($rows=mysqli_fetch_array($result2, MYSQLI_BOTH)){
 ?>
 
-<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 
 <tr>
-<td width="18%" bgcolor="#F8F7F1"><strong>Name</strong></td>
-<td width="5%" bgcolor="#F8F7F1">:</td>
-<td width="77%" bgcolor="#F8F7F1"><? echo $rows['a_name']; ?></td>
-</tr>
-
-<tr>
-<td bgcolor="#F8F7F1"><strong>Reply/strong></td>
+<td bgcolor="#F8F7F1"><strong>Reply</strong></td>
 <td bgcolor="#F8F7F1">:</td>
 <td bgcolor="#F8F7F1"><? echo $rows['a_answer']; ?></td>
 </tr>
@@ -105,7 +99,7 @@ mysqli_close($conn);
 
 
 <BR>
-<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form name="form1" method="post" action="add_answer.php">
 <td>
