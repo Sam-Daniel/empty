@@ -123,13 +123,12 @@ mysqli_close($conn);
 
 
   <div data-role="main" class="ui-content">
-    <form>
+    <form name="form1" method="post" action="add_answer.php">
       <fieldset data-role="collapsible">
         <legend>Reply to the post</legend>
           <BR>
 <table width="1200" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
-<form name="form1" method="post" action="add_answer.php">
 <td>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 
@@ -148,11 +147,6 @@ mysqli_close($conn);
 </form>
 </tr>
 </table>
-
-          
-      
-      </fieldset>
-    </form>
   </div>
 </div>
 
