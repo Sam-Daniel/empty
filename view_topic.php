@@ -1,5 +1,5 @@
 <?php
-
+include ('head.html');
 $host="sql12.freesqldatabase.com"; // Host name 
 $username="sql12218697"; // Mysql username 
 $password="uJEXQMxpDw"; // Mysql password 
@@ -17,7 +17,7 @@ $result=mysqli_query($conn, $sql);
 $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 ?>
 
-<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="1200" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
 <tr>
