@@ -50,7 +50,7 @@ $result2=mysqli_query($conn, $sql2);
 while($rows=mysqli_fetch_array($result2, MYSQLI_BOTH)){
 ?>
 
-<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
