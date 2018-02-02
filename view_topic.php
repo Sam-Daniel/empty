@@ -33,7 +33,7 @@ $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 </tr>
 
 <tr>
-<td bgcolor="#F8F7F1"><strong> </strong><? echo $rows['datetime']; ?></td>
+<td bgcolor="#F8F7F1"><strong> Date/time </strong><? echo $rows['datetime']; ?></td>
 </tr>
 </table></td>
 </tr>
