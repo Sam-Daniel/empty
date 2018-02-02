@@ -17,7 +17,7 @@ $result=mysqli_query($conn, $sql);
 $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 ?>
 
-<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
 <tr>
@@ -29,11 +29,11 @@ $rows=mysqli_fetch_array($result, MYSQLI_BOTH)
 </tr>
 
 <tr>
-<td bgcolor="#F8F7F1"><strong>By :</strong> <? echo $rows['name']; ?> <strong>Email : </strong><? echo $rows['email'];?></td>
+<td bgcolor="#F8F7F1"><strong>By :</strong> <? echo $rows['name']; ?> <strong> </strong><? echo $rows['email'];?></td>
 </tr>
 
 <tr>
-<td bgcolor="#F8F7F1"><strong>Date/time : </strong><? echo $rows['datetime']; ?></td>
+<td bgcolor="#F8F7F1"><strong> </strong><? echo $rows['datetime']; ?></td>
 </tr>
 </table></td>
 </tr>
