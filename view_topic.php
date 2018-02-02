@@ -111,7 +111,22 @@ mysqli_close($conn);
 ?>
 
 
-<BR>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+
+  <div data-role="main" class="ui-content">
+    <form>
+      <fieldset data-role="collapsible">
+        <legend>Reply to the post</legend>
+          <BR>
 <table width="1200" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form name="form1" method="post" action="add_answer.php">
@@ -125,14 +140,25 @@ mysqli_close($conn);
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><input name="id" type="hidden" value="<? echo $id; ?>"></td>
-<td><input type="submit" class="button-1" value="Submit"> <input type="reset" name="button-1" value="Reset"></td>
+<td><input name="id" type="hidden" value="5"></td>
+<td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
 </tr>
 </table>
 </td>
 </form>
 </tr>
 </table>
+
+          
+      
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
+
  <style>
  .button-1{
   right-padding: 5px;
