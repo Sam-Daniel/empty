@@ -53,23 +53,15 @@ while($rows=mysqli_fetch_array($result2, MYSQLI_BOTH)){
 <table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td bgcolor="#F8F7F1"><strong>ID</strong></td>
-<td bgcolor="#F8F7F1">:</td>
-<td bgcolor="#F8F7F1"><? echo $rows['a_id']; ?></td>
-</tr>
+
 <tr>
 <td width="18%" bgcolor="#F8F7F1"><strong>Name</strong></td>
 <td width="5%" bgcolor="#F8F7F1">:</td>
 <td width="77%" bgcolor="#F8F7F1"><? echo $rows['a_name']; ?></td>
 </tr>
+
 <tr>
-<td bgcolor="#F8F7F1"><strong>Email</strong></td>
-<td bgcolor="#F8F7F1">:</td>
-<td bgcolor="#F8F7F1"><? echo $rows['a_email']; ?></td>
-</tr>
-<tr>
-<td bgcolor="#F8F7F1"><strong>Answer</strong></td>
+<td bgcolor="#F8F7F1"><strong>Reply/strong></td>
 <td bgcolor="#F8F7F1">:</td>
 <td bgcolor="#F8F7F1"><? echo $rows['a_answer']; ?></td>
 </tr>
@@ -104,8 +96,7 @@ $result4=mysqli_query($conn, $sql4);
 
  
 
-// count more value
-$addview=$view+1;
+// count more value*$addview=$view+1;
 $sql5="update $tbl_name set view='$addview' WHERE id='$id'";
 $result5=mysqli_query($conn, $sql5);
 
@@ -114,25 +105,16 @@ mysqli_close($conn);
 
 
 <BR>
-<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form name="form1" method="post" action="add_answer.php">
 <td>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
+
 <tr>
-<td width="18%"><strong>Name</strong></td>
-<td width="3%">:</td>
-<td width="79%"><input name="a_name" type="text" id="a_name" size="45"></td>
-</tr>
-<tr>
-<td><strong>Email</strong></td>
-<td>:</td>
-<td><input name="a_email" type="text" id="a_email" size="45"></td>
-</tr>
-<tr>
-<td valign="top"><strong>Answer</strong></td>
+<td valign="top"><strong>Reply</strong></td>
 <td valign="top">:</td>
-<td><textarea name="a_answer" cols="45" rows="3" id="a_answer"></textarea></td>
+<td><textarea name="a_answer" cols="120" rows="3" id="a_answer"></textarea></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
