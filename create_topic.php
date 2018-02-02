@@ -1,3 +1,17 @@
+
+<html>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<body>
+
+<div w3-include-html="head.html"></div> 
+
+<script>
+w3.includeHTML();
+</script>
+
+</body>
+</html>
 <table width="1000" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form id="form1" name="form1" method="post" action="add_topic.php">
